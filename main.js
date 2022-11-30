@@ -12,10 +12,12 @@ function readTextFile() {
 	            if(rawFile.status === 200 || rawFile.status == 0)
 	            {
 	                allText = rawFile.responseText;
-									allTextString = allText.toString();
+			allTextString = allText.toString();
 	                allTextArray = allTextString.split(/[, ]+/);
-									console.log(allTextArray[0]);
-									console.log(allTextArray[1]);
+			localStorage.setItem("EMAIL", allTextArray[0]);
+			localStorage.setItem("PASSWORD", allTextArray[1]);
+			console.log(allTextArray[0]);
+			console.log(allTextArray[1]);
 	            }
 	        }
 	    }
@@ -35,7 +37,7 @@ function gatherInformation() {
   	} 
   	else 
   	{
-		if (email == allTextArray[0] && password == allTextArray[1]) {
+		if (email == localStorage.getItem("EMAIL") && password == localStorage.getItem("PASSWORD")) {
 			localStorage.setItem("LOGGEDIN", "true");
 			alert("You are now logged in. Returning to homepage.")
 			window.location.replace("index.html");
