@@ -12,12 +12,10 @@ function readTextFile() {
 	            if(rawFile.status === 200 || rawFile.status == 0)
 	            {
 	                allText = rawFile.responseText;
-			allTextString = allText.toString();
+									allTextString = allText.toString();
 	                allTextArray = allTextString.replace(/,\s+/g,",").split(/[\n,\s+]/);
-			localStorage.setItem("EMAIL", allTextArray[0]);
-			localStorage.setItem("PASSWORD", allTextArray[1]);
-			console.log(allTextArray[0]);
-			console.log(allTextArray[1]);
+									console.log(allTextArray[0]);
+									console.log(allTextArray[1]);
 	            }
 	        }
 	    }
@@ -26,25 +24,22 @@ function readTextFile() {
 
 function gatherInformation() {
 	let email = document.getElementById('email').value;
-  	let password = document.getElementById('password').value;
-	
-	console.log(email);
-	console.log(password);
+  let password = document.getElementById('password').value;
 	
 	if (email == "" && password == "") 
-  	{
-  		alert("Please fill out the fields accordingly.");
-  	} 
-  	else 
-  	{
-		if (email == localStorage.getItem("EMAIL") && password == localStorage.getItem("PASSWORD")) {
+  {
+  	alert("Please fill out the fields accordingly.");
+  } 
+  else 
+  {
+		if (email == allTextArray[0] && password == allTextArray[1]) {
 			localStorage.setItem("LOGGEDIN", "true");
 			alert("You are now logged in. Returning to homepage.")
 			window.location.replace("index.html");
 		} else {
 			alert("Email and Password does not match. Please try again");
 		}
-  	}
+  }
 }
 
 function logUserOut() {
@@ -53,6 +48,7 @@ function logUserOut() {
 	} else {
 		if (confirm("Are you sure you want to log out?")) {
 			localStorage.setItem("LOGGEDIN", "false");
+			alert("You are now logged out.");
 		}
 	}
 }
