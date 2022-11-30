@@ -13,7 +13,7 @@ function readTextFile() {
 	            {
 	                allText = rawFile.responseText;
 			allTextString = allText.toString();
-	                allTextArray = allTextStringstr.replace(/,\s+/g,",").split(/[\n,\s+]/);
+	                allTextArray = allTextString.replace(/,\s+/g,",").split(/[\n,\s+]/);
 			localStorage.setItem("EMAIL", allTextArray[0]);
 			localStorage.setItem("PASSWORD", allTextArray[1]);
 			console.log(allTextArray[0]);
