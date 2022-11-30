@@ -23,15 +23,15 @@ function readTextFile() {
 }
 
 function gatherInformation() {
-	if (document.getElementById('email').value == "" && document.getElementById('password').value == "") 
+	let email = document.getElementById('email').value;
+  let password = document.getElementById('password').value;
+	
+	if (email == "" && password == "") 
   {
   	alert("Please fill out the fields accordingly.");
   } 
   else 
   {
-  	let email = document.getElementById('email').value;
-  	let password = document.getElementById('password').value;
-
 		if (email == allTextArray[0] && password == allTextArray[1]) {
 			localStorage.setItem("LOGGEDIN", "true");
 			alert("You are now logged in. Returning to homepage.")
