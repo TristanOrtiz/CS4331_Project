@@ -1,42 +1,40 @@
 <!DOCTYPE html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta charset="utf-8">
-  <title> Secure Health Information System </title>
-  <link rel="stylesheet" href="main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="utf-8">
+	<title> Secure Health Information System </title>
+	<link rel="stylesheet" href="main.css">
 </head>
 
 <body>
-  <script src="main.js"></script>
-  <h1 style="text-align: center"> Secure Health Information System </h1>
-  <h3 style="text-align: center"> CS 4331 Project - Tristan Ortiz</h3>
-  <hr>
+	<script src="main.js"></script>
+	<h1 style="text-align: center"> Secure Health Information System </h1>
+	<h3 style="text-align: center"> CS 4331 Project - Tristan Ortiz</h3>
+	<hr>
 
 
-  <div class="flex-parent jc-center">
-    <a href="login.html">
-      <button class="button-85" role="button">Login</button>
-    </a>
-  </div>
+	<div class="flex-parent jc-center">
+		<button class="button-85" role="button" onclick=(checkLogin())>Login</button>
+	</div>
 
-  <div class="flex-parent jc-center">
-    <button class="button-85" role="button" onclick=(logUserOut())>Logout</button>
-  </div>
+	<div class="flex-parent jc-center">
+		<button class="button-85" role="button" onclick=(logUserOut())>Logout</button>
+	</div>
 
-  <div class="flex-parent jc-center">
-    <button class="button-85" role="button">Ask Questions</button>
-  </div>
+	<div class="flex-parent jc-center">
+		<button class="button-85" role="button" onclick=(checkAskQuestions())>Ask Questions</button>
+	</div>
 
-  <div class="flex-parent jc-center">
-    <button class="button-85" role="button">See Test Results</button>
-  </div>
+	<div class="flex-parent jc-center">
+		<button class="button-85" role="button" onclick=(checkTestResults())>See Test Results</button>
+	</div>
 
-  <div class="flex-parent jc-center">
-    <button class="button-85" role="button">Request Refills</button>
-  </div>
+	<div class="flex-parent jc-center">
+		<button class="button-85" role="button" onclick=(checkRequestRefills())>Request Refills</button>
+	</div>
 
-  <div class="flex-parent jc-center">
-    <button class="button-85" role="button">Pay Bill</button>
-  </div>
+	<div class="flex-parent jc-center">
+		<button class="button-85" role="button" onclick=(checkPayBill())>Pay Bill</button>
+	</div>
 </body>
