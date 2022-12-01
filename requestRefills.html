@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title> Login </title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body onload=(readTextFileRefill())>
+  <div class="login-box">
+		<form>
+			<label for="drugSelector">Choose your medication you wish to refill (hold down CTRL to select multiple)</label>
+			<select class="select-staff" size="10" name="Drugs" id="drug" multiple>
+				<option value="60">Morphine</option>
+				<option value="94">Antropine</option>
+				<option value="46">Aminodarone</option>
+				<option value="29">Dopamine</option>
+				<option value="75">Hydralazine</option>
+				<option value="59">Mounjaro</option>
+				<option value="92">Flagyl</option>
+				<option value="143">Xanax</option>
+				<option value="42">Ativan</option>
+				<option value="64">Klonopin</option>
+				<option value="18">Norvasc</option>
+				<option value="47">Zoloft</option>
+				<option value="35">Buspar</option>
+				<option value="15">Voltaren</option>
+				<option value="67">Vicodin</option>
+				<option value="49">Keflex</option>
+				<option value="58">Keppra</option>
+				<option value="93">Ranexa</option>
+				<option value="48">Requip</option>
+				<option value="63">Rocephin</option>
+			</select>
+			<button style="margin-right: 70px;" type="button" onclick=(orderMedicine())>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+			</button>
+			<button type="button" onclick=(returnHome())>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Back
+			</button>
+		</form>
+  </div>
+<script src="main.js"></script>
+</body>

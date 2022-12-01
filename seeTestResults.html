@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title> Login </title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body onload=(readTextFileResults())>
+  <div class="login-box">
+		<form>
+			<label for="dateSelector">Choose your test result date</label>
+			<select class="select-staff" name="Dates" id="date">
+				<option value="0">October 5th 2022</option>
+				<option value="2">October 10th 2022</option>
+				<option value="4">October 14th 2022</option>
+				<option value="6">November 20th, 2022</option>
+			</select>
+			<br>
+			<br>
+			<button style="margin-right: 70px;" type="button" onclick=(grabTestResults())>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+			</button>
+			<button type="button" onclick=(returnHome())>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Back
+			</button>
+		</form>
+  </div>
+<script src="main.js"></script>
+</body>

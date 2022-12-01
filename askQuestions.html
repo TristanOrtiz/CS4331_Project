@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <title> Secure Health Information System </title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="login-box">
+		<form>
+			<label for="questionTo">Choose who to ask a quesiton to</label>
+			<select class="select-staff" name="questionTo" id="employee">
+				<optgroup label="Doctors">
+					<option value="Dr. Greyson">Dr. Greyson</option>
+					<option value="Dr. Honeymoon">Dr. Honeymoon</option>
+					<option value="Dr. Awesomeness"> Dr. Awesomeness</option>
+				</optgroup>
+				<optgroup label="Nurses">
+					<option value="Shay Shatterson">Shay Shatterson</option>
+					<option value="Tri Ketchup">Tri Ketchup</option>
+					<option value="Teaser Weaser">Teaser Weaser</option>
+					<option value="Walt Waterly">Walt Waterly</option>
+				</optgroup>
+				<optgroup label="Staff">
+					<option value="Richard Richardson">Richard Richardson</option>
+					<option value="Walk Paul">Walk Paul</option>
+					<option value="Runner Tracker">Runner Tracker</option>
+					<option value="Jesus King">Jesus King</option>
+					<option value="Almight Aries">Almight Aries</option>
+					<option vlaue="Hover Rain">Hover Rain</option>
+				</optgroup>
+			</select>
+			<br>
+			<textarea id="message" name="userMessage" placeholder="Write message here..."> </textarea>
+			<br>
+			<button style="margin-right: 70px;" type="button" onclick=(sendMessage())>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Submit
+			</button>
+			<button type="button" onclick=(returnHome())>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Back
+			</button>
+		</form>
+	</div>
+	<script src="main.js"></script>
+</body>

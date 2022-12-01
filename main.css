@@ -250,3 +250,41 @@ body {
     bottom: 100%;
   }
 }
+
+.select-staff {
+	width: 80%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1.1;
+	margin: 1rem;
+	color: white;
+	background-color: #42275a
+}
+
+.select-staff[multiple] {
+	height: 80%;
+}
+
+textarea {
+	width: 80%;
+  min-width: 15ch;
+  max-width: 30ch;
+  border: 1px solid var(--select-border);
+  border-radius: 0.25em;
+  padding-top: 0.25em;
+  font-size: 1rem;
+  cursor: pointer;
+  line-height: 1.1;
+	margin: 1rem;
+	color: white;
+	background-color: #42275a
+}
+
+.bigger {
+	width: 100%;
+}
