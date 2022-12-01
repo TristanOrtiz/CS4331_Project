@@ -82,6 +82,9 @@ function readPaymentInformationFile() {
 	        }
 	    }
 	rawFile.send(null);
+
+	var total = localStorage.getItem("TOTAL");
+	document.getElementById("text").innerHTML = total;
 }
 
 function checkLogin() {
